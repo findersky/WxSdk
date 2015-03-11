@@ -11,13 +11,6 @@ using System.Runtime.InteropServices;
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
 [assembly: Guid("e7fbd781-7840-4598-be83-e3dc60dc02d6")]
 
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("微信公众平台Sdk")]
-[assembly: AssemblyCopyright("© ")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyInformationalVersion("4.9.1")]
-[assembly: AssemblyFileVersion("4.9.1")]
-[assembly: AssemblyVersion("4.9.1")]
 
-//[assembly: AssemblyKeyName(@"Pioneer")]
+
+
