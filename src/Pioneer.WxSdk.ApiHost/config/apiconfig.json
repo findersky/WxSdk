@@ -1,0 +1,7 @@
+﻿{
+    ServerUrl: "http://127.0.0.1:15127",
+    LogLevel: 0,
+    ServiceName: "ApiHost",
+    ServiceDisplayName: "ApiHost",
+    ServiceDescription: "ApiHost"
+}

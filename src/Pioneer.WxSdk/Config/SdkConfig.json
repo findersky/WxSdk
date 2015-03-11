@@ -1,0 +1,5 @@
+﻿{
+    "RemoteServer": "http://127.0.0.1:15127",
+    "Deploy": "Client",
+    "ListenerType": ""
+}
