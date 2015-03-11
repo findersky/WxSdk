@@ -5,15 +5,9 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk", "Pioneer.WxSdk\Pioneer.WxSdk.csproj", "{2F0C9A49-B3E0-4258-878A-4C1A3400E232}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk.Test", "Pioneer.WxSdk.Test\Pioneer.WxSdk.Test.csproj", "{58EF3B4E-F43C-49D9-9CDA-9B7E047E9D79}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk.SelfHost", "Pioneer.WxSdk.SelfHost\Pioneer.WxSdk.SelfHost.csproj", "{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHost", "WebHost\WebHost.csproj", "{F1AB92EE-AFDC-4D64-9B58-1D1CCA51DF7F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk.ApiHost", "Pioneer.WxSdk.ApiHost\Pioneer.WxSdk.ApiHost.csproj", "{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk.Data", "Pioneer.WxSdk.Data\Pioneer.WxSdk.Data.csproj", "{3D0B7222-4E7A-41FD-8124-906A1228E790}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,26 +19,14 @@ Global
 		{2F0C9A49-B3E0-4258-878A-4C1A3400E232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F0C9A49-B3E0-4258-878A-4C1A3400E232}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F0C9A49-B3E0-4258-878A-4C1A3400E232}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58EF3B4E-F43C-49D9-9CDA-9B7E047E9D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58EF3B4E-F43C-49D9-9CDA-9B7E047E9D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58EF3B4E-F43C-49D9-9CDA-9B7E047E9D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58EF3B4E-F43C-49D9-9CDA-9B7E047E9D79}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1AB92EE-AFDC-4D64-9B58-1D1CCA51DF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1AB92EE-AFDC-4D64-9B58-1D1CCA51DF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1AB92EE-AFDC-4D64-9B58-1D1CCA51DF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1AB92EE-AFDC-4D64-9B58-1D1CCA51DF7F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D0B7222-4E7A-41FD-8124-906A1228E790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D0B7222-4E7A-41FD-8124-906A1228E790}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D0B7222-4E7A-41FD-8124-906A1228E790}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D0B7222-4E7A-41FD-8124-906A1228E790}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
