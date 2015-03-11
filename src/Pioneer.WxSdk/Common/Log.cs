@@ -32,39 +32,22 @@ namespace Pioneer.WxSdk
             return GetLogger(typeof(T));
         }
 
-#if Pioneer
         internal static ILog GetLogger(Type t)
         {
-            return new NetsharpLogAdapter(t);
-        }
-
-        internal static ILog GetLogger(string name)
-        {
-            return new NetsharpLogAdapter(name);
-        }
-
-#else
-        internal static ILog GetLogger(Type t)
-        {
-            if (LogProvider == null)
+            if (SdkSetup.LogProvider == null)
                 return SdkLogger.Instance;
             return SdkSetup.LogProvider(t.FullName);
         }
 
         internal static ILog GetLogger(string name)
         {
-            if (LogProvider == null)
+            if (SdkSetup.LogProvider == null)
                 return SdkLogger.Instance;
             return SdkSetup.LogProvider(name);
         }
-
-#endif
     }
 
 
-
-
-#if !Pioneer
 
     class SdkTraceListener : TraceListener
     {
@@ -151,5 +134,4 @@ namespace Pioneer.WxSdk
         }
     }
 
-#endif
 }
