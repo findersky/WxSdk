@@ -93,7 +93,7 @@ namespace Pioneer.WxSdk.Message
             }
             else
             {
-                throw new HttpException((int)System.Net.HttpStatusCode.MethodNotAllowed, "不支持的Http请求方式");
+                throw new System.Net.WebException("不支持的Http请求方式", System.Net.WebExceptionStatus.ProtocolError);
             }
 
             string encrypttype = urlParmteres["encrypt_type"];

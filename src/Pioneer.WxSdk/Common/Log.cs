@@ -35,52 +35,34 @@ namespace Pioneer.WxSdk
         internal static ILog GetLogger(Type t)
         {
             if (SdkSetup.LogProvider == null)
-                return SdkLogger.Instance;
+                return LogFactory.Instance;
             return SdkSetup.LogProvider(t.FullName);
         }
 
         internal static ILog GetLogger(string name)
         {
             if (SdkSetup.LogProvider == null)
-                return SdkLogger.Instance;
+                return LogFactory.Instance;
             return SdkSetup.LogProvider(name);
         }
-    }
 
-
-
-    class SdkTraceListener : TraceListener
-    {
-        public override void Write(string message)
-        {
-            string WriteMessage = DateTime.Now.ToLocalTime() + " :" + message + Environment.NewLine;
-
-            File.AppendAllText("log.txt", WriteMessage);
-        }
-
-        public override void WriteLine(string message)
-        {
-            this.Write(message);
-        }
-    }
-
-    public class SdkLogger : ILog
-    {
-        static SdkLogger _log;
-        public static SdkLogger Instance
+        static ConsoleLogger _log;
+        public static ConsoleLogger Instance
         {
             get
             {
                 if (_log == null)
-                    _log = new SdkLogger();
+                    _log = new ConsoleLogger();
                 return _log;
             }
         }
+    }
 
-        SdkLogger()
-        {
-            System.Diagnostics.Debug.Listeners.Add(new SdkTraceListener());
-        }
+
+
+    public class ConsoleLogger : ILog
+    {
+
 
         public void Debug(string message)
         {
