@@ -1,9 +1,6 @@
-﻿using Pioneer.WxSdk.Api;
-using Pioneer.WxSdk.Message;
+﻿using Pioneer.WxSdk.Message;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Pioneer.WxSdk
 {

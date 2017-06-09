@@ -25,28 +25,16 @@ namespace Pioneer.WxSdk.Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddEAPService();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
 
-
-
-            app.Run(async context =>
-            {
-
-
-                await MessageCenter.ProcessRequestAsync(context.Request.Path, context.Request.Method, context.Request.Body, (s, e) =>
-             {
-                 if (e != null)
-                 {
-                     return;
-                 }
-
-                 context.Response.WriteAsync(s);
-             });
-            });
+            app.UseEAPService();
 
 
         }
