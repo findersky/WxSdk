@@ -36,6 +36,12 @@ using System.Threading.Tasks;
             
             services.AddSingleton<IWxService>(new WxService());
 
+            SdkSetup.RegisterListener(new DefaultMessageListener());
+
+            SdkSetup.MessageTokenGetter = (s) => { return new PublicAccount() { MessageToken = "test" }; };
+
+            SdkSetup.RefreshPublicAccountInfo = (pa) => { };
+
 
             services.AddLogging();
 
