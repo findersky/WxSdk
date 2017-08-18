@@ -67,51 +67,51 @@ namespace Pioneer.WxSdk
         public void Debug(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Error(Exception e)
         {
             Exception be = e.GetBaseException();
 
-            System.Diagnostics.Debug.Write(be.Message);
-            System.Diagnostics.Debug.Write(be.StackTrace);
+            Console.WriteLine(be.Message);
+            Console.WriteLine(be.StackTrace);
         }
 
         public void Error(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Trace(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Info(string message)
         {
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
 
         public void Warning(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Error(string message, Exception e)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
 
             if (e != null)
             {
                 Exception baseException = e.GetBaseException();
-                System.Diagnostics.Debug.Write(e.Message);
-                System.Diagnostics.Debug.Write(e.StackTrace);
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
             }
         }
     }

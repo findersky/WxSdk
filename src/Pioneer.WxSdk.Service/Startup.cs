@@ -13,11 +13,11 @@ namespace Pioneer.WxSdk.Service
         {
             Configuration = configuration;
 
-            SdkSetup.RegisterListener(new DefaultMessageListener());
+            //SdkSetup.RegisterListener(new DefaultMessageListener());
 
-            SdkSetup.MessageTokenGetter = (s) => { return new PublicAccount() { MessageToken = "test" }; };
+            //SdkSetup.MessageTokenGetter = (s) => { return new PublicAccount() { MessageToken = "test" }; };
 
-            SdkSetup.RefreshPublicAccountInfo = (pa) => { };
+            //SdkSetup.RefreshPublicAccountInfo = (pa) => { };
         }
 
         public IConfiguration Configuration { get; }
@@ -26,7 +26,7 @@ namespace Pioneer.WxSdk.Service
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddEAPService();
+            services.AddWxService();
 
         }
 
@@ -34,7 +34,7 @@ namespace Pioneer.WxSdk.Service
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
 
-            app.UseEAPService();
+            app.UseWxService();
 
 
         }

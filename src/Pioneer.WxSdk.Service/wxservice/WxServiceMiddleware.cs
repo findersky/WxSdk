@@ -1,10 +1,5 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.StaticFiles.Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System;
 using System.Threading.Tasks;
 
@@ -56,13 +51,13 @@ namespace Pioneer.WxSdk.Service
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        public Task Invoke(HttpContext context)
+        public async Task Invoke(HttpContext context)
         {
             if (context.Request.Path == "/wx")
             {
-                this.service.Invoke(context);
+               await this.service.Invoke(context);
             }
-            return _next(context);
+            await _next(context);
         }
     }
 }

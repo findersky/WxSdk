@@ -18,7 +18,7 @@ namespace Pioneer.WxSdk.Service
 
         public async Task Invoke(HttpContext context)
         {
-            var url = context.Request.Path;
+            var url = context.Request.QueryString.Value;
             var method = context.Request.Method;
             var stream = context.Request.Body;
 
@@ -28,6 +28,7 @@ namespace Pioneer.WxSdk.Service
                 {
                     return;
                 }
+
 
                 context.Response.WriteAsync(s);
             });
