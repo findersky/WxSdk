@@ -31,14 +31,14 @@ namespace Pioneer.WxSdk.Message
         /// </summary>
         /// <param name="stream"></param>
         /// <param name="processCompleted"></param>
-        public static Task ProcessRequestAsync(string url, string HttpMethod, Stream stream, Action<string, Exception> processCompleted)
+        public async  static Task ProcessRequestAsync(string url, string HttpMethod, Stream stream, Action<string, Exception> processCompleted)
         {
             if (processCompleted == null)
             {
                 throw new ArgumentNullException("processCompleted");
             }
 
-            return Task.Factory.StartNew<string>(() =>
+            await Task.Run<string>(() =>
             {
                 return new MessageCenter().ProcessRequest(url, HttpMethod, stream);
 
@@ -93,7 +93,7 @@ namespace Pioneer.WxSdk.Message
             }
             else
             {
-                throw new HttpException((int)System.Net.HttpStatusCode.MethodNotAllowed, "不支持的Http请求方式");
+                throw new WxException("不支持的Http请求方式");
             }
 
             string encrypttype = urlParmteres["encrypt_type"];

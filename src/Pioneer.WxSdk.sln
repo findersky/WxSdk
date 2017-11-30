@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26510.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk", "Pioneer.WxSdk\Pioneer.WxSdk.csproj", "{2F0C9A49-B3E0-4258-878A-4C1A3400E232}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk.SelfHost", "Pioneer.WxSdk.SelfHost\Pioneer.WxSdk.SelfHost.csproj", "{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk.ApiHost", "Pioneer.WxSdk.ApiHost\Pioneer.WxSdk.ApiHost.csproj", "{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.WxSdk.SelfHost", "Pioneer.WxSdk.Service\Pioneer.WxSdk.Service.csproj", "{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A086ED2-3ABB-44BA-B678-F52F15BF7D0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BADC3F31-B1DB-4A4E-9AAB-BD4414A19EF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

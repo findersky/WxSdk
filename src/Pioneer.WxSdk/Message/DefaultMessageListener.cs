@@ -78,21 +78,14 @@ namespace Pioneer.WxSdk.Message
 
         protected virtual ResponseMessage TextRequest(TextRequest textRequest)
         {
-            
-            TextResponse tr = new TextResponse(textRequest);
-
-            tr.Content = textRequest.Content;
-
-            tr.Content += "<a href='http://www.qanso.com'>首页</a>";
-
-            return tr;
+            return DefaultText(textRequest);
         }
 
         ResponseMessage DefaultText(RequestMessage request)
         {
             TextResponse tr = new TextResponse(request);
 
-            tr.Content = XmlService.ToXml(request);
+            tr.Content = JsonService.ToJson(request);
 
             return tr;
         }

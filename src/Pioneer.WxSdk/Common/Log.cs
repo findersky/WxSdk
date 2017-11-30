@@ -35,101 +35,83 @@ namespace Pioneer.WxSdk
         internal static ILog GetLogger(Type t)
         {
             if (SdkSetup.LogProvider == null)
-                return SdkLogger.Instance;
+                return LogFactory.Instance;
             return SdkSetup.LogProvider(t.FullName);
         }
 
         internal static ILog GetLogger(string name)
         {
             if (SdkSetup.LogProvider == null)
-                return SdkLogger.Instance;
+                return LogFactory.Instance;
             return SdkSetup.LogProvider(name);
         }
-    }
 
-
-
-    class SdkTraceListener : TraceListener
-    {
-        public override void Write(string message)
-        {
-            string WriteMessage = DateTime.Now.ToLocalTime() + " :" + message + Environment.NewLine;
-
-            File.AppendAllText("log.txt", WriteMessage);
-        }
-
-        public override void WriteLine(string message)
-        {
-            this.Write(message);
-        }
-    }
-
-    public class SdkLogger : ILog
-    {
-        static SdkLogger _log;
-        public static SdkLogger Instance
+        static ConsoleLogger _log;
+        public static ConsoleLogger Instance
         {
             get
             {
                 if (_log == null)
-                    _log = new SdkLogger();
+                    _log = new ConsoleLogger();
                 return _log;
             }
         }
+    }
 
-        SdkLogger()
-        {
-            System.Diagnostics.Debug.Listeners.Add(new SdkTraceListener());
-        }
+
+
+    public class ConsoleLogger : ILog
+    {
+
 
         public void Debug(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Error(Exception e)
         {
             Exception be = e.GetBaseException();
 
-            System.Diagnostics.Debug.Write(be.Message);
-            System.Diagnostics.Debug.Write(be.StackTrace);
+            Console.WriteLine(be.Message);
+            Console.WriteLine(be.StackTrace);
         }
 
         public void Error(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Trace(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Info(string message)
         {
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
 
         public void Warning(string message)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
         }
 
         public void Error(string message, Exception e)
         {
 
-            System.Diagnostics.Debug.Write(message);
+            Console.WriteLine(message);
 
             if (e != null)
             {
                 Exception baseException = e.GetBaseException();
-                System.Diagnostics.Debug.Write(e.Message);
-                System.Diagnostics.Debug.Write(e.StackTrace);
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
             }
         }
     }
